@@ -1066,6 +1066,12 @@ textarea {
     margin-top: 20px;
 }
 
+.additional-project {
+    margin-top: 72px;
+    padding-top: 72px;
+    border-top: 1px solid var(--border);
+}
+
 
 /* =========================
    Project Visual
@@ -2134,7 +2140,7 @@ textarea {
         margin-top: 48px;
     }
 
-    .featured-project {
+    .featured-project:not(.additional-project) {
         align-items: start;
         margin-top: 20px;
     }
