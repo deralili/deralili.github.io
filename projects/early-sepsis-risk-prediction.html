@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Early Sepsis Risk Prediction | Chidera Lilian Amadike</title>
+    <meta name="description" content="A research case study comparing TF-IDF machine learning models and ClinicalBERT for sepsis classification from early ICU clinical notes.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container navbar">
+            <a href="../index.html" class="logo">CLA<span>.</span></a>
+            <a href="../index.html#projects" class="nav-cta">Back to Portfolio</a>
+        </div>
+    </header>
+    <main>
+        <section class="section case-study-hero">
+            <div class="container">
+                <p class="section-label">CASE STUDY / HEALTHCARE ANALYTICS</p>
+                <h1 class="case-study-title">Early Sepsis Risk <span>Prediction from Clinical Notes</span></h1>
+                <p class="case-study-intro">My Major Research Project at Toronto Metropolitan University examines whether clinical notes from the first 24 hours of ICU admission can support sepsis risk classification.</p>
+                <div class="case-study-tags"><span>Python</span><span>TF-IDF</span><span>scikit-learn</span><span>XGBoost</span><span>ClinicalBERT</span><span>PyTorch</span></div>
+                <div class="case-study-actions">
+                    <a href="https://github.com/deralili/Early-Sepsis-Risk-Prediction-NLP" target="_blank" rel="noopener noreferrer" class="btn btn-primary">View on GitHub ↗</a>
+                    <a href="#overview" class="btn btn-secondary">Explore Case Study ↓</a>
+                </div>
+            </div>
+        </section>
+        <section class="section case-overview" id="overview">
+            <div class="container">
+                <p class="section-label">01 / PROJECT OVERVIEW</p>
+                <div class="case-overview-grid">
+                    <div class="case-overview-heading"><h2>Finding signals in <span>early clinical documentation.</span></h2></div>
+                    <div class="case-overview-copy">
+                        <p class="overview-lead">This retrospective study uses MIMIC-III ICU records to compare conventional text classification with a clinical language model.</p>
+                        <p>I constructed a cohort using ICD-9 diagnosis codes, extracted notes recorded in the first 24 hours, and compared TF-IDF with Logistic Regression and XGBoost against three ClinicalBERT configurations. I evaluated accuracy, precision, recall, F1, and ROC-AUC, then explored model explanations.</p>
+                    </div>
+                </div>
+                <div class="case-kpi-grid">
+                    <div class="case-kpi"><strong>38,509</strong><span>Eligible ICU admissions</span></div>
+                    <div class="case-kpi"><strong>11.07%</strong><span>Admissions labeled sepsis</span></div>
+                    <div class="case-kpi"><strong>78.62%</strong><span>Logistic Regression recall</span></div>
+                    <div class="case-kpi"><strong>0.9169</strong><span>Logistic Regression ROC-AUC</span></div>
+                </div>
+            </div>
+        </section>
+        <section class="section case-questions">
+            <div class="container">
+                <p class="section-label">02 / RESEARCH QUESTIONS</p>
+                <div class="case-questions-heading"><h2>Comparing performance <span>and practical trade-offs.</span></h2><p>The study asks whether the added complexity of a transformer improves classification from early clinical notes.</p></div>
+                <div class="case-question-list">
+                    <article class="case-question-item"><span class="case-question-number">01</span><div><h3>How do traditional text models compare with ClinicalBERT?</h3><p>TF-IDF features fed Logistic Regression and XGBoost; fine-tuned ClinicalBERT learned contextual text representations.</p></div></article>
+                    <article class="case-question-item"><span class="case-question-number">02</span><div><h3>What happens when sensitivity is prioritized?</h3><p>Threshold adjustment and sliding-window inference changed the balance between recall and false positives.</p></div></article>
+                    <article class="case-question-item"><span class="case-question-number">03</span><div><h3>Can predictions be interpreted?</h3><p>The project examines influential text features and token-level explanations while noting their limits.</p></div></article>
+                </div>
+            </div>
+        </section>
+        <section class="section case-segmentation">
+            <div class="container">
+                <p class="section-label">03 / MODEL RESULTS</p>
+                <div class="case-segmentation-heading"><h2>Simple text models <span>performed strongly.</span></h2><p>Results on the held-out test set; model choices involve different precision and recall trade-offs.</p></div>
+                <div class="case-image-frame"><img src="../assets/images/sepsis-model-comparison.webp" alt="Chart comparing accuracy, precision, recall, F1, and ROC-AUC across the evaluated sepsis models" loading="lazy"></div>
+                <div class="case-overview-copy" style="max-width: 900px; margin-top: 30px;">
+                    <p>Logistic Regression achieved the highest recall (78.62%) and ROC-AUC (0.9169), with precision of 45.22%. XGBoost had the highest precision (76.84%) and F1 (57.85%), but lower recall (46.38%).</p>
+                    <p>The strongest ClinicalBERT configuration reached 0.8592 ROC-AUC. Sliding-window inference raised ClinicalBERT recall to 68.75%, while precision fell to 33.82%.</p>
+                </div>
+            </div>
+        </section>
+        <section class="section case-takeaway">
+            <div class="container">
+                <p class="section-label">04 / TAKEAWAY &amp; LIMITATIONS</p>
+                <div class="takeaway-heading"><h2>Useful research signals, <span>with clear limits.</span></h2></div>
+                <div class="takeaway-copy">
+                    <p>For this dataset and evaluation, the TF-IDF models outperformed ClinicalBERT on key metrics. Logistic Regression found more labeled sepsis cases; XGBoost yielded fewer false positives.</p>
+                    <p>Sepsis labels came from diagnosis codes, and the retrospective data came from one medical center. Some first-day notes may explicitly mention sepsis, so these results do not establish prospective early detection or clinical readiness. The source data requires credentialed PhysioNet access.</p>
+                    <p><a href="https://github.com/deralili/Early-Sepsis-Risk-Prediction-NLP/blob/main/reports/MRP_Final_Report.pdf" target="_blank" rel="noopener noreferrer">Read the full research report ↗</a></p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="site-footer"><div class="container footer-inner"><p class="footer-name">Chidera Lilian Amadike</p><p class="footer-copy">© 2026 Chidera Lilian Amadike. All rights reserved.</p><a href="#" class="back-to-top">Back to top ↑</a></div></footer>
+    <script src="../js/script.js"></script>
+</body>
+</html>
