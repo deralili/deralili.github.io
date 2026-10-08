@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ontario Rental Market Intelligence | Chidera Lilian Amadike</title>
+    <meta name="description" content="A case study of Ontario rental trends, vacancy, and rent-to-income indicators across 15 markets using Excel, Python, PostgreSQL, and Power BI.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="rental-case-study">
+    <header class="site-header">
+        <div class="container navbar">
+            <a href="../index.html" class="logo">CLA<span>.</span></a>
+            <a href="../index.html#projects" class="nav-cta">Back to Portfolio</a>
+        </div>
+    </header>
+    <main>
+        <section class="section case-study-hero">
+            <div class="container">
+                <p class="section-label">CASE STUDY / MARKET INTELLIGENCE</p>
+                <h1 class="case-study-title">Ontario Rental <span>Market Intelligence</span></h1>
+                <p class="case-study-intro">Inspired by my own experience navigating Ontario’s rental market, I built an analytics pipeline and Power BI report to compare rents, vacancy, rental supply, and income-based indicators across 15 markets.</p>
+                <div class="case-study-tags"><span>Excel</span><span>Python</span><span>PostgreSQL</span><span>SQL</span><span>Power BI</span><span>DAX</span></div>
+                <div class="case-study-actions">
+                    <a href="https://github.com/deralili/Ontario-Rental-Market-Intelligence" target="_blank" rel="noopener noreferrer" class="btn btn-primary">View on GitHub ↗</a>
+                    <a href="#dashboards" class="btn btn-secondary">Explore Dashboards ↓</a>
+                </div>
+            </div>
+        </section>
+        <section class="section case-overview" id="overview">
+            <div class="container">
+                <p class="section-label">01 / PROJECT OVERVIEW</p>
+                <div class="case-overview-grid">
+                    <div class="case-overview-heading"><h2>Understanding rental conditions <span>beyond a single price.</span></h2></div>
+                    <div class="case-overview-copy">
+                        <p class="overview-lead">The highest-rent market is not always the market with the strongest rent growth or the tightest availability.</p>
+                        <p>This project is framed around the needs of an Ontario Housing Strategy &amp; Market Intelligence Team. It brings rent, vacancy, rental stock, turnover, and family income into one analytical view to support descriptive market comparisons.</p>
+                        <p>I combined CMHC Rental Market Reports for 2019–2025 with Statistics Canada Table 11-10-0017-01 income observations for 2019–2023. The final report covers 15 Ontario markets and five apartment unit categories, from studio units to the published Total category.</p>
+                    </div>
+                </div>
+                <div class="case-kpi-grid">
+                    <div class="case-kpi"><strong>15</strong><span>Ontario rental markets</span></div>
+                    <div class="case-kpi"><strong>2019–2025</strong><span>Rental market coverage</span></div>
+                    <div class="case-kpi"><strong>2019–2023</strong><span>Family income coverage</span></div>
+                    <div class="case-kpi"><strong>3</strong><span>Power BI dashboard pages</span></div>
+                </div>
+            </div>
+        </section>
+        <section class="section case-questions">
+            <div class="container">
+                <p class="section-label">02 / BUSINESS QUESTIONS</p>
+                <div class="case-questions-heading"><h2>Comparing markets <span>from several angles.</span></h2><p>The analysis connects rental costs to local availability, growth, unit types, and income.</p></div>
+                <div class="case-question-list">
+                    <article class="case-question-item"><span class="case-question-number">01</span><div><h3>Where have rents grown most?</h3><p>Compare average rent levels, annual changes, and cumulative growth since 2019.</p></div></article>
+                    <article class="case-question-item"><span class="case-question-number">02</span><div><h3>How do availability and supply differ?</h3><p>Explore vacancy, surveyed rental stock, and turnover by market and apartment unit type.</p></div></article>
+                    <article class="case-question-item"><span class="case-question-number">03</span><div><h3>Which markets show greater rental pressure?</h3><p>Examine rent growth alongside vacancy, and compare annualized average rent with median after-tax family income.</p></div></article>
+                </div>
+            </div>
+        </section>
+        <section class="section case-workflow">
+            <div class="container">
+                <p class="section-label">03 / DATA &amp; ANALYTICAL WORKFLOW</p>
+                <div class="case-workflow-heading"><h2>From public source files <span>to reusable market insights.</span></h2><p>Each tool serves a distinct purpose, with SQL owning the analytical calculations.</p></div>
+                <div class="workflow-list">
+                    <article class="workflow-item"><span class="workflow-number">01</span><div><h3>Excel · Audit the sources</h3><p>Documented source files, field definitions, geographic mappings, and quality checks in a structured audit workbook.</p></div></article>
+                    <article class="workflow-item"><span class="workflow-number">02</span><div><h3>Python · Extract the observations</h3><p>Created reproducible extraction scripts to reshape annual source files into 2,625 rental observations and 75 income observations for SQL ingestion.</p></div></article>
+                    <article class="workflow-item"><span class="workflow-number">03</span><div><h3>PostgreSQL · Transform and analyze</h3><p>Built raw, clean, and analytics schemas; standardized market and unit names; preserved unavailable values and reliability codes; joined rent and income; and calculated growth and rent-to-income views.</p></div></article>
+                    <article class="workflow-item"><span class="workflow-number">04</span><div><h3>Power BI · Explore and communicate</h3><p>Designed three dashboard pages with market, year, and unit filters, DAX measures, trend comparisons, and clear notes on data coverage.</p></div></article>
+                </div>
+            </div>
+        </section>
+        <section class="section case-findings">
+            <div class="container">
+                <p class="section-label">04 / SELECTED FINDINGS</p>
+                <div class="case-findings-heading"><h2>Different indicators tell <span>different market stories.</span></h2><p>These findings use the published Total apartment category. Growth is calculated from average rent observations.</p></div>
+                <div class="finding-grid">
+                    <article class="finding-card"><span class="finding-number">01 / RENT LEVELS</span><h3>Toronto had the highest average rent.</h3><div class="finding-stats"><div><strong>$1,913</strong><span>Average monthly rent · 2025</span></div></div><p>Toronto ranked highest among the 15 markets in the analysis. The figure describes CMHC’s surveyed private apartment rental stock.</p></article>
+                    <article class="finding-card"><span class="finding-number">02 / RENT GROWTH</span><h3>Brantford and London grew faster.</h3><div class="finding-stats"><div><strong>≈53%</strong><span>Brantford · 2019–2025</span></div><div><strong>≈50%</strong><span>London · 2019–2025</span></div></div><p>Toronto’s cumulative average rent growth was approximately 31% over the same period, illustrating the difference between rent levels and growth.</p></article>
+                    <article class="finding-card"><span class="finding-number">03 / RENTAL AVAILABILITY</span><h3>Vacancy varied across markets.</h3><div class="finding-stats"><div><strong>1.2%</strong><span>Greater Sudbury · 2025</span></div><div><strong>4.3%</strong><span>Barrie · 2025</span></div></div><p>Local vacancy conditions add context to rent comparisons; a province-wide view can conceal meaningful differences.</p></article>
+                    <article class="finding-card"><span class="finding-number">04 / INCOME COMPARISON</span><h3>Toronto’s rent-to-income indicator was highest.</h3><div class="finding-stats"><div><strong>36.2%</strong><span>Market-level indicator · 2023</span></div></div><p>Annualized average rent divided by median after-tax family income. This compares market statistics and does not measure individual renter household affordability.</p></article>
+                </div>
+            </div>
+        </section>
+        <section class="section case-dashboard" id="dashboards">
+            <div class="container">
+                <p class="section-label">05 / DASHBOARD PREVIEW</p>
+                <div class="dashboard-heading"><h2>Three views of <span>Ontario’s rental market.</span></h2><p>These are report screenshots. Open the Power BI file to use its interactive filters. Click any preview to view it at full size.</p></div>
+                <article class="rental-dashboard">
+                    <h3>01 / Ontario Market Overview</h3>
+                    <p>Compares market rent and vacancy rankings with historical rent trends. This preview shows all markets in 2025; individual KPI cards populate when a market is selected.</p>
+                    <a href="../assets/images/rental-market-overview.webp" class="case-image-frame rental-preview" aria-label="View the full-size Ontario Market Overview dashboard"><img src="../assets/images/rental-market-overview.webp" alt="2025 Ontario market overview with rent and vacancy rankings and rent trends from 2019 to 2025" width="1339" height="754" loading="lazy"></a>
+                </article>
+                <article class="rental-dashboard">
+                    <h3>02 / Market &amp; Unit Analysis</h3>
+                    <p>Explores rent, vacancy, rental universe, and turnover across apartment unit categories, with market and year filters.</p>
+                    <a href="../assets/images/rental-market-unit-analysis.webp" class="case-image-frame rental-preview" aria-label="View the full-size Market and Unit Analysis dashboard"><img src="../assets/images/rental-market-unit-analysis.webp" alt="Power BI dashboard comparing rental conditions across studio, one-bedroom, two-bedroom, three-bedroom-plus, and total apartment categories" width="1338" height="748" loading="lazy"></a>
+                </article>
+                <article class="rental-dashboard">
+                    <h3>03 / Affordability &amp; Rental Pressure</h3>
+                    <p>Combines rent-to-income comparisons, cumulative growth, and a rent-growth-versus-vacancy scatter plot. This preview is filtered to 2023; income-based indicators end in 2023, while rental indicators extend to 2025.</p>
+                    <a href="../assets/images/rental-affordability-pressure.webp" class="case-image-frame rental-preview" aria-label="View the full-size Affordability and Rental Pressure dashboard"><img src="../assets/images/rental-affordability-pressure.webp" alt="2023 dashboard showing market rent-to-income indicators, cumulative rent growth since 2019, and rent growth versus vacancy" width="1336" height="751" loading="lazy"></a>
+                </article>
+                <div class="case-study-actions rental-resources">
+                    <a href="https://github.com/deralili/Ontario-Rental-Market-Intelligence/blob/main/powerbi/Ontario_Rental_Market_Intelligence.pbix" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Get Power BI Report ↗</a>
+                    <a href="https://github.com/deralili/Ontario-Rental-Market-Intelligence/tree/main/sql" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Explore SQL Workflow ↗</a>
+                </div>
+                <p class="rental-resource-note">The report opens in Power BI Desktop. Refreshing its data requires a compatible PostgreSQL database.</p>
+            </div>
+        </section>
+        <section class="section case-takeaway">
+            <div class="container">
+                <p class="section-label">06 / METHODOLOGY &amp; TAKEAWAY</p>
+                <div class="takeaway-heading"><h2>Useful comparisons start with <span>careful definitions.</span></h2></div>
+                <div class="takeaway-copy">
+                    <p>This project demonstrates source auditing, reproducible extraction, relational data modeling, time-based SQL calculations, and dashboard communication. Together, the outputs support comparisons of rent levels, growth, availability, and local income without reducing rental pressure to a single number.</p>
+                    <p>CMHC figures cover the private apartment rental market in its reports. The Total category is not added to its component unit categories. Unavailable observations, including source symbols such as ** and ++, remain missing rather than estimated.</p>
+                    <p>Calculated rent growth is distinct from CMHC’s published rent-change measure. The rent-to-income indicator combines aggregate rent and family income statistics that may describe different households; it is not an official household affordability rate. Income values are not extended beyond 2023.</p>
+                    <p>Relationships between vacancy and rent growth are descriptive and do not establish causation. The report provides context for market comparison rather than a prediction of future rents.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="site-footer"><div class="container footer-inner"><p class="footer-name">Chidera Lilian Amadike</p><p class="footer-copy">© 2026 Chidera Lilian Amadike. All rights reserved.</p><a href="#" class="back-to-top">Back to top ↑</a></div></footer>
+    <script src="../js/script.js"></script>
+</body>
+</html>
