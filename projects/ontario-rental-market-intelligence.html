@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
 </head>
-<body class="rental-case-study">
+<body>
     <header class="site-header">
         <div class="container navbar">
             <a href="../index.html" class="logo">CLA<span>.</span></a>
@@ -21,12 +21,12 @@
         <section class="section case-study-hero">
             <div class="container">
                 <p class="section-label">CASE STUDY / MARKET INTELLIGENCE</p>
-                <h1 class="case-study-title">Ontario Rental <span>Market Intelligence</span></h1>
+                <h1 class="case-study-title">Ontario Rental<br><span>Market Intelligence</span></h1>
                 <p class="case-study-intro">Inspired by my own experience navigating Ontario’s rental market, I built an analytics pipeline and Power BI report to compare rents, vacancy, rental supply, and income-based indicators across 15 markets.</p>
                 <div class="case-study-tags"><span>Excel</span><span>Python</span><span>PostgreSQL</span><span>SQL</span><span>Power BI</span><span>DAX</span></div>
                 <div class="case-study-actions">
                     <a href="https://github.com/deralili/Ontario-Rental-Market-Intelligence" target="_blank" rel="noopener noreferrer" class="btn btn-primary">View on GitHub ↗</a>
-                    <a href="#dashboards" class="btn btn-secondary">Explore Dashboards ↓</a>
+                    <a href="#overview" class="btn btn-secondary">Explore Case Study ↓</a>
                 </div>
             </div>
         </section>
@@ -64,6 +64,18 @@
             <div class="container">
                 <p class="section-label">03 / DATA &amp; ANALYTICAL WORKFLOW</p>
                 <div class="case-workflow-heading"><h2>From public source files <span>to reusable market insights.</span></h2><p>Each tool serves a distinct purpose, with SQL owning the analytical calculations.</p></div>
+                <div class="case-dataset">
+                    <div class="case-dataset-copy">
+                        <span class="case-block-label">DATASET</span>
+                        <h3>CMHC Rental Reports &amp; Statistics Canada Income Data</h3>
+                        <p>Rental observations from seven annual CMHC editions were aligned with five years of median after-tax family income data. Geographic names were standardized across the sources before building market-year analytical views.</p>
+                    </div>
+                    <div class="case-dataset-details">
+                        <div><span>Markets</span><strong>15 Ontario CMAs</strong></div>
+                        <div><span>Rental Observations</span><strong>2,625</strong></div>
+                        <div><span>Income Observations</span><strong>75</strong></div>
+                    </div>
+                </div>
                 <div class="workflow-list">
                     <article class="workflow-item"><span class="workflow-number">01</span><div><h3>Excel · Audit the sources</h3><p>Documented source files, field definitions, geographic mappings, and quality checks in a structured audit workbook.</p></div></article>
                     <article class="workflow-item"><span class="workflow-number">02</span><div><h3>Python · Extract the observations</h3><p>Created reproducible extraction scripts to reshape annual source files into 2,625 rental observations and 75 income observations for SQL ingestion.</p></div></article>
@@ -74,45 +86,86 @@
         </section>
         <section class="section case-findings">
             <div class="container">
-                <p class="section-label">04 / SELECTED FINDINGS</p>
+                <p class="section-label">04 / KEY FINDINGS</p>
                 <div class="case-findings-heading"><h2>Different indicators tell <span>different market stories.</span></h2><p>These findings use the published Total apartment category. Growth is calculated from average rent observations.</p></div>
                 <div class="finding-grid">
-                    <article class="finding-card"><span class="finding-number">01 / RENT LEVELS</span><h3>Toronto had the highest average rent.</h3><div class="finding-stats"><div><strong>$1,913</strong><span>Average monthly rent · 2025</span></div></div><p>Toronto ranked highest among the 15 markets in the analysis. The figure describes CMHC’s surveyed private apartment rental stock.</p></article>
-                    <article class="finding-card"><span class="finding-number">02 / RENT GROWTH</span><h3>Brantford and London grew faster.</h3><div class="finding-stats"><div><strong>≈53%</strong><span>Brantford · 2019–2025</span></div><div><strong>≈50%</strong><span>London · 2019–2025</span></div></div><p>Toronto’s cumulative average rent growth was approximately 31% over the same period, illustrating the difference between rent levels and growth.</p></article>
-                    <article class="finding-card"><span class="finding-number">03 / RENTAL AVAILABILITY</span><h3>Vacancy varied across markets.</h3><div class="finding-stats"><div><strong>1.2%</strong><span>Greater Sudbury · 2025</span></div><div><strong>4.3%</strong><span>Barrie · 2025</span></div></div><p>Local vacancy conditions add context to rent comparisons; a province-wide view can conceal meaningful differences.</p></article>
-                    <article class="finding-card"><span class="finding-number">04 / INCOME COMPARISON</span><h3>Toronto’s rent-to-income indicator was highest.</h3><div class="finding-stats"><div><strong>36.2%</strong><span>Market-level indicator · 2023</span></div></div><p>Annualized average rent divided by median after-tax family income. This compares market statistics and does not measure individual renter household affordability.</p></article>
+                    <article class="finding-card"><span class="finding-number">01</span><h3>Toronto had the highest average rent.</h3><div class="finding-stats"><div><strong>$1,913</strong><span>Average monthly rent · 2025</span></div></div><p>Toronto ranked highest among the 15 markets in the analysis. The figure describes CMHC’s surveyed private apartment rental stock.</p></article>
+                    <article class="finding-card"><span class="finding-number">02</span><h3>Brantford and London grew faster.</h3><div class="finding-stats"><div><strong>≈53%</strong><span>Brantford · 2019–2025</span></div><div><strong>≈50%</strong><span>London · 2019–2025</span></div></div><p>Toronto’s cumulative average rent growth was approximately 31% over the same period, illustrating the difference between rent levels and growth.</p></article>
+                    <article class="finding-card"><span class="finding-number">03</span><h3>Vacancy varied across markets.</h3><div class="finding-stats"><div><strong>1.2%</strong><span>Greater Sudbury · 2025</span></div><div><strong>4.3%</strong><span>Barrie · 2025</span></div></div><p>Local vacancy conditions add context to rent comparisons; a province-wide view can conceal meaningful differences.</p></article>
+                </div>
+            </div>
+        </section>
+        <section class="section case-retention">
+            <div class="container">
+                <p class="section-label">05 / AFFORDABILITY &amp; RENTAL PRESSURE</p>
+                <div class="case-retention-heading">
+                    <div><h2>Connecting rental costs to <span>local income and availability.</span></h2></div>
+                    <div><p>The rent-to-income indicator adds economic context to market comparisons, while vacancy and rent growth help describe local rental pressure.</p></div>
+                </div>
+                <div class="case-overview-grid">
+                    <div class="case-overview-heading"><h2>Toronto’s indicator was <span>36.2% in 2023.</span></h2></div>
+                    <div class="case-overview-copy">
+                        <p class="overview-lead">Toronto had the highest rent-to-income indicator among the 15 markets in 2023.</p>
+                        <p>The calculation annualizes average monthly rent and divides it by median after-tax family income. For Toronto, an average rent of $1,826 per month and income of $60,510 produced an indicator of approximately 36.2%.</p>
+                        <p>These are aggregate market statistics that may describe different households. The result is useful for comparing markets, but it is not the actual housing-cost burden of individual renters. Income-based comparisons end in 2023.</p>
+                    </div>
+                </div>
+                <div class="retention-takeaway">
+                    <span class="case-block-label">ANALYTICAL TAKEAWAY</span>
+                    <p>Consider rent levels, growth, vacancy, and income together. Stronger rent growth alongside lower vacancy can indicate rental pressure, but the dashboard describes patterns rather than demonstrating a causal relationship.</p>
                 </div>
             </div>
         </section>
         <section class="section case-dashboard" id="dashboards">
             <div class="container">
-                <p class="section-label">05 / DASHBOARD PREVIEW</p>
-                <div class="dashboard-heading"><h2>Three views of <span>Ontario’s rental market.</span></h2><p>These are report screenshots. Open the Power BI file to use its interactive filters. Click any preview to view it at full size.</p></div>
-                <article class="rental-dashboard">
-                    <h3>01 / Ontario Market Overview</h3>
-                    <p>Compares market rent and vacancy rankings with historical rent trends. This preview shows all markets in 2025; individual KPI cards populate when a market is selected.</p>
-                    <a href="../assets/images/rental-market-overview.webp" class="case-image-frame rental-preview" aria-label="View the full-size Ontario Market Overview dashboard"><img src="../assets/images/rental-market-overview.webp" alt="2025 Ontario market overview with rent and vacancy rankings and rent trends from 2019 to 2025" width="1339" height="754" loading="lazy"></a>
-                </article>
-                <article class="rental-dashboard">
-                    <h3>02 / Market &amp; Unit Analysis</h3>
-                    <p>Explores rent, vacancy, rental universe, and turnover across apartment unit categories, with market and year filters.</p>
-                    <a href="../assets/images/rental-market-unit-analysis.webp" class="case-image-frame rental-preview" aria-label="View the full-size Market and Unit Analysis dashboard"><img src="../assets/images/rental-market-unit-analysis.webp" alt="Power BI dashboard comparing rental conditions across studio, one-bedroom, two-bedroom, three-bedroom-plus, and total apartment categories" width="1338" height="748" loading="lazy"></a>
-                </article>
-                <article class="rental-dashboard">
-                    <h3>03 / Affordability &amp; Rental Pressure</h3>
-                    <p>Combines rent-to-income comparisons, cumulative growth, and a rent-growth-versus-vacancy scatter plot. This preview is filtered to 2023; income-based indicators end in 2023, while rental indicators extend to 2025.</p>
-                    <a href="../assets/images/rental-affordability-pressure.webp" class="case-image-frame rental-preview" aria-label="View the full-size Affordability and Rental Pressure dashboard"><img src="../assets/images/rental-affordability-pressure.webp" alt="2023 dashboard showing market rent-to-income indicators, cumulative rent growth since 2019, and rent growth versus vacancy" width="1336" height="751" loading="lazy"></a>
-                </article>
+                <p class="section-label">06 / POWER BI DASHBOARD</p>
+                <div class="dashboard-heading">
+                    <div><h2>Turning market analysis into <span>decision-ready reporting.</span></h2></div>
+                    <div><p>The analytical outputs were consolidated into a three-page Power BI report for comparing market conditions, apartment unit types, and income-based indicators. Click a preview to view it at full size.</p></div>
+                </div>
+                <div class="dashboard-showcase">
+                    <div class="dashboard-showcase-copy">
+                        <span class="case-block-label">ONTARIO MARKET OVERVIEW</span>
+                        <h3>A high-level view of rental market conditions.</h3>
+                        <p>The overview compares average rent and vacancy across Ontario markets, then places current conditions in context with historical rent trends.</p>
+                        <p>This preview shows all markets in 2025. Individual KPI cards populate when a market is selected in the interactive report.</p>
+                    </div>
+                    <div class="dashboard-showcase-visual">
+                        <a href="../assets/images/rental-market-overview.webp" class="case-image-frame rental-preview" aria-label="View the full-size Ontario Market Overview dashboard"><img src="../assets/images/rental-market-overview.webp" alt="2025 Ontario market overview with rent and vacancy rankings and rent trends from 2019 to 2025" width="1339" height="754" loading="lazy"></a>
+                    </div>
+                </div>
+                <div class="dashboard-showcase dashboard-showcase-reverse">
+                    <div class="dashboard-showcase-visual">
+                        <a href="../assets/images/rental-market-unit-analysis.webp" class="case-image-frame rental-preview" aria-label="View the full-size Market and Unit Analysis dashboard"><img src="../assets/images/rental-market-unit-analysis.webp" alt="Power BI dashboard comparing rental conditions across studio, one-bedroom, two-bedroom, three-bedroom-plus, and total apartment categories" width="1338" height="748" loading="lazy"></a>
+                    </div>
+                    <div class="dashboard-showcase-copy">
+                        <span class="case-block-label">MARKET &amp; UNIT ANALYSIS</span>
+                        <h3>A deeper view of apartment supply and unit types.</h3>
+                        <p>The unit analysis brings together average rent, vacancy, rental universe, and turnover to show how conditions vary across apartment categories.</p>
+                        <p>Market, year, and unit filters support focused comparisons. The published Total category is shown alongside its component categories and is not added to them.</p>
+                    </div>
+                </div>
+                <div class="dashboard-showcase">
+                    <div class="dashboard-showcase-copy">
+                        <span class="case-block-label">AFFORDABILITY &amp; RENTAL PRESSURE</span>
+                        <h3>Connecting rents, income, growth, and availability.</h3>
+                        <p>The third page compares rent-to-income indicators and cumulative rent growth, with a scatter plot showing annual rent growth alongside vacancy.</p>
+                        <p>This preview is filtered to 2023. Income-based indicators are available through 2023, while rental market indicators extend to 2025.</p>
+                    </div>
+                    <div class="dashboard-showcase-visual">
+                        <a href="../assets/images/rental-affordability-pressure.webp" class="case-image-frame rental-preview" aria-label="View the full-size Affordability and Rental Pressure dashboard"><img src="../assets/images/rental-affordability-pressure.webp" alt="2023 dashboard showing market rent-to-income indicators, cumulative rent growth since 2019, and rent growth versus vacancy" width="1336" height="751" loading="lazy"></a>
+                    </div>
+                </div>
                 <div class="case-study-actions rental-resources">
                     <a href="https://github.com/deralili/Ontario-Rental-Market-Intelligence/blob/main/powerbi/Ontario_Rental_Market_Intelligence.pbix" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Get Power BI Report ↗</a>
                     <a href="https://github.com/deralili/Ontario-Rental-Market-Intelligence/tree/main/sql" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Explore SQL Workflow ↗</a>
                 </div>
-                <p class="rental-resource-note">The report opens in Power BI Desktop. Refreshing its data requires a compatible PostgreSQL database.</p>
+                <p class="rental-resource-note">These are report screenshots. The interactive report opens in Power BI Desktop; refreshing its data requires a compatible PostgreSQL database.</p>
             </div>
         </section>
         <section class="section case-takeaway">
             <div class="container">
-                <p class="section-label">06 / METHODOLOGY &amp; TAKEAWAY</p>
+                <p class="section-label">07 / PROJECT TAKEAWAY &amp; METHODOLOGY</p>
                 <div class="takeaway-heading"><h2>Useful comparisons start with <span>careful definitions.</span></h2></div>
                 <div class="takeaway-copy">
                     <p>This project demonstrates source auditing, reproducible extraction, relational data modeling, time-based SQL calculations, and dashboard communication. Together, the outputs support comparisons of rent levels, growth, availability, and local income without reducing rental pressure to a single number.</p>
